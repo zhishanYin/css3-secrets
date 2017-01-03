@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>半透明边框</title>
+        <style>
+        	body {
+				background: url('stone-art.jpg');
+			}
+
+			div {
+				border: 10px solid hsla(0,0%,100%,.5);/*半透明边框*/
+				background: white;
+				/* background: url('stone-art.jpg'); */
+				background-clip: padding-box;
+				/*限定背景颜色的范围为padding，否者背景颜色会侵入到border*/
+				/* background-clip: border-box|padding-box|content-box; 规定背景的绘制区域：*/
+				/* styling */
+				max-width: 20em;/*最大宽度*/
+				padding: 2em;
+				margin: 2em auto 0;/*外边距*/
+				font: 100%/1.5 sans-serif; /*font-style font-variant font-weight font-size/line-height font-family*/
+			}
+        </style>
+    </head>
+    <body>
+    	<div>
+    		这里利用border的hsla实现了一个半透明的边框
+    	</div>
+    </body>
+</html>

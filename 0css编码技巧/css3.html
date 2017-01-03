@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>css编码技巧——按钮</title>
+        <style>
+        	div{
+        		margin: 10px 0;
+        	}
+        	.button1{
+        		padding: 6px 16px;/*内边距*/
+        		border: 1px solid #446d88;/*边框*/
+        		border-radius: 4px;/*圆角*/
+        		box-shadow: 0 1px 5px gray;/*阴影*/
+        		color: white;/*字体颜色*/
+        		background: #58a linear-gradient(#77a0bb,#58a);/*背景颜色*/
+        		text-shadow:0 -1px 1px #335166;/*字体阴影*/
+        		font-size: 20px;/*字体大小*/
+        		line-height: 30px;/*行高*/
+        	}
+        	.button2{
+        		padding: .3em .8em;/*内边距*/
+        		border: 1px solid #446d88;/*边框*/
+        		border-radius: .2em;/*圆角*/
+        		box-shadow: 0 .05em .25em gray;/*阴影*/
+        		color: white;/*字体颜色*/
+        		background: #58a linear-gradient(#77a0bb,#58a);/*背景颜色*/
+        		text-shadow:0 -.05em .25em #335166;/*字体阴影*/
+        		font-size: 125%;/*字体大小*/
+        		line-height: 1.5;/*行高*/
+        	}
+        	.button3{
+        		padding: .3em .8em;/*内边距*/
+        		border: 1px solid rgba(0, 0, 0, .1);/*边框*/
+        		border-radius: .2em;/*圆角*/
+        		box-shadow: 0 .05em .25em rgba(0,0,0,.5);/*阴影*/
+        		color: white;/*字体颜色*/
+        		background: #58a linear-gradient(hsla(0, 0%, 100%, .2),transparent);/*背景颜色*/
+        		text-shadow:0 -.05em .25em rgba(0,0,0,.5);/*字体阴影*/
+        		font-size: 125%;/*字体大小*/
+        		line-height: 1.5;/*行高*/
+        	}
+			.red{
+				background-color: red;
+			}
+			.big{
+				font-size: 200%;
+			}
+        </style>
+    </head>
+    <body>
+	    <div>
+	    	<button class="button1">按钮</button>
+	    	<!-- 如果要改变按钮1的大小及颜色，则需改变padding border-radius box-shadow background text-shadow font-size line-height -->
+	    </div>
+	    <div>
+	    	<button class="button2">按钮</button>
+	    	<!-- 使用了em（相对于字体大小）单位后 如果要改变按钮2的大小及颜色，则需改变 box-shadow background text-shadow font-size -->
+	    </div>
+	    <div>
+	    	<button class="button3">按钮</button>
+	    	<!-- 使用了em（相对于字体大小）单位和颜色跟随主色调后 如果要改变按钮3的大小及颜色，则需改变  background-color font-size -->
+	    	<button class="button3 red">按钮</button>
+	    	<button class="button3 red big">按钮</button>
+	    	<button class="button3 big">按钮</button>
+	    </div>
+    </body>
+</html>

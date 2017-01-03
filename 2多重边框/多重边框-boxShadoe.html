@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>多重边框-boxShadoe</title>
+        <style>
+        	.boxShadoe{
+				width: 1000px;
+				height: 60px;
+				margin: 25px;
+				background: yellowgreen;
+				box-shadow: 0 0 0 10px #655,
+			            	0 0 0 15px deeppink,
+			            	0 2px 5px 15px rgba(0,0,0,.6);
+
+			    /* box-shadow: h-shadow v-shadow blur spread color inset;  
+					值	            描述	
+				h-shadow	必需。水平阴影的位置。允许负值。	
+				v-shadow	必需。垂直阴影的位置。允许负值。	
+				blur	    可选。模糊距离。	
+				spread	    可选。阴影的尺寸。	
+				color	    可选。阴影的颜色。请参阅 CSS 颜色值。	
+				inset	    可选。将外部阴影 (outset) 改为内部阴影。
+			    */
+			}
+        	
+        </style>
+    </head>
+    <body>
+     <div class="boxShadoe">box-shadow方案的多重边框不会占据元素的空间，边框也不会响应事件，所以要使用margin来为投影撑出足够的空间</div>
+    </body>
+</html>

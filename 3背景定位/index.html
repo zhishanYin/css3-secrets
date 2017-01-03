@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<title>灵活的背景定位</title>
+        <style>
+        	div{
+        		
+				max-width: 10em;
+				min-height: 5em;
+				margin: 10px;
+				padding: 10px;
+				color: white;
+				font: 100%/1 sans-serif;
+				background: url(http://csssecrets.io/images/code-pirate.svg)
+				            no-repeat bottom right #58a;
+				            /*  bottom right 这里的定位是为了防止background-position不起作用的时候平稳退化时使用的 */
+        	}
+        	.position {
+				background-position: right 20px bottom 10px;
+				/* 利用background-position进行定位 */
+				/* background-position: calc(100% - 20px) calc(100% - 10px); 计算属性*/
+				
+			}
+			.origin{
+				background-origin: content-box;
+				/* 利用background-origin限定背景图片的定位基准进行定位 */
+			}
+
+        </style>
+    </head>
+    <body>
+    <div class="position">
+    	背景定位
+    </div>
+    <div class="origin">
+    	背景定位
+    </div>
+    </body>
+</html>
